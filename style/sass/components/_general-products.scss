@@ -1,0 +1,225 @@
+.general-products-sec {
+  padding: 85px 0 100px 0;
+  .titles-holder {
+    margin-bottom: 0;
+  }
+}
+.titles-shop-parent {
+  margin-bottom: 35px;
+}
+.bestseller {
+  padding-bottom: 120px;
+}
+
+.titles-shop-parent {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  .view-more {
+    font-size: 18px;
+    color: #e87e1c;
+    font-weight: 300;
+    transition: all linear 0.2s;
+    &:hover {
+      color: #327b24;
+    }
+  }
+}
+.product-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  &:hover {
+    .img-holder {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.like {
+  background-color: #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all linear 0.3s;
+  position: absolute;
+  top: 8px;
+  inset-inline-end: 8px;
+  z-index: 2;
+  &:hover {
+    background-color: #327b24;
+    .icon {
+      color: #fff;
+    }
+  }
+  .icon {
+    font-size: 18px;
+    color: #1a1a1a;
+    transition: all linear 0.2s;
+  }
+}
+.item-desc {
+  text-align: center;
+  width: 100%;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .brand-name {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #1a1a1a;
+    font-weight: 400;
+    margin-bottom: 12px;
+    text-align: center;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-transform: capitalize;
+    transition: all linear 0.2s;
+    &:hover {
+      color: #327b24;
+    }
+  }
+}
+.price {
+  width: 100%;
+  justify-content: center;
+  row-gap: 3px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  .current-price {
+    font-size: 20px;
+    line-height: 25px;
+    color: #1a1a1a;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0;
+    text-transform: capitalize;
+  }
+  .deleted {
+    line-height: 25px;
+    font-size: 16px;
+    color: #808080;
+    font-weight: 300;
+    text-decoration: line-through;
+  }
+}
+
+.add {
+  width: 100%;
+  height: 45px;
+  column-gap: 7px;
+  border-radius: 22px;
+  background-color: #ffffff;
+  border: 1px solid #327b24;
+  color: #327b24;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  transition: all ease-in-out 0.2s;
+  &:hover {
+    background-color: #327b24;
+    .addtoCart-text,
+    .icon {
+      color: #fff;
+    }
+  }
+  .icon {
+    font-size: 16px;
+    color: #327b24;
+    transition: all ease-in-out 0.2s;
+  }
+  .addtoCart-text {
+    transition: all ease-in-out 0.2s;
+    font-weight: 500;
+    font-size: 16px;
+    color: #327b24;
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+.product-item {
+  .img-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+
+      aspect-ratio: 1 / 1;
+      transition: all linear 0.2s;
+    }
+  }
+}
+
+@include max-768 {
+  .titles-shop-parent .view-more {
+    font-size: 16px;
+  }
+  .general-products-sec {
+    padding-top: 50px;
+  }
+  .titles-shop-parent {
+    margin-bottom: 25px;
+  }
+  .add .addtoCart-text {
+    font-size: 14px;
+  }
+  .add {
+    column-gap: 4px;
+  }
+
+  .general-products-sec {
+    padding-bottom: 70px;
+  }
+
+  .price {
+    height: 53px;
+    justify-content: initial;
+    margin-bottom: 10px;
+  }
+  .item-desc .brand-name {
+    font-size: 16px;
+    min-height: 48px;
+    -webkit-line-clamp: 2;
+  }
+  .like {
+    width: 32px;
+    height: 32px;
+    top: 5px;
+    inset-inline-end: 5px;
+    .icon {
+      font-size: 16px;
+    }
+  }
+  .product-item {
+    .img-holder {
+      border-radius: 10px;
+      img {
+        border-radius: 10px;
+      }
+    }
+  }
+}
