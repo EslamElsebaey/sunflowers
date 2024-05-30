@@ -1068,7 +1068,7 @@ body {
 }
 .group-parent {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
 
@@ -1084,21 +1084,18 @@ body {
      object-fit: cover;
 }
 
-.banner1 {
-  grid-column: 1/span 2;
+.banners-group .banner img {
+  aspect-ratio: 330/430;
 }
 
-.banners-group-reverse .banner2 {
-  grid-column: 1/span 1;
-  grid-row: 1;
+.banners-group:not(.banners-group-reverse) .banner:first-of-type {
+  grid-column: 1/span 2;
+  aspect-ratio: 690/430;
 }
-.banners-group-reverse .banner3 {
-  grid-column: 2/span 1;
-  grid-row: 1;
-}
-.banners-group-reverse .banner1 {
-  grid-column: 3/span 1;
-  grid-row: 1;
+
+.banners-group-reverse .banner:nth-of-type(3) {
+  grid-column: 3/span 2;
+  aspect-ratio: 690/430;
 }
 
 .banner-shine {
@@ -1137,9 +1134,8 @@ body {
   .group-parent {
     grid-template-columns: 1fr 1fr;
   }
-  .banners-group-reverse .banner1 {
+  .banners-group-reverse .banner:nth-of-type(3) {
     grid-column: 1/span 2;
-    grid-row: unset;
   }
 }
 @media only screen and (max-width: 767px) {
